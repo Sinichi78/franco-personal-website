@@ -1,6 +1,28 @@
 let menu = document.querySelector('#menu-btn');
 let header = document.querySelector('.header');
 
+// Get the modal
+var modal = document.getElementById("modal");
+
+// Get the image and insert it inside the modal
+var images = document.querySelectorAll(".box img");
+var modalImg = document.getElementById("fullImage");
+
+// Loop through each image and add a click event listener
+images.forEach(function(image) {
+    image.addEventListener("click", function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    });
+});
+
+// Close the modal when the close button is clicked
+var closeBtn = document.getElementsByClassName("close")[0];
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+};
+
+
 menu.onclick = () =>{
     menu.classList.toggle('fa-times');
     header.classList.toggle('active');

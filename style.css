@@ -371,35 +371,43 @@ section{
     opacity: 1;
 }
 
-.contact form{
-    max-width: 70rem;
-    margin: 0 auto;
-}
-
-.contact form .box{
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
     width: 100%;
-    padding: 1.4rem;
-    font-size: 2rem;
-    text-transform: none;
-    border: var(--border-light);
-    background-color: var(--light-bg);
-    margin:1rem 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
 }
 
-.contact form textarea{
-    height: 20rem;
-    resize: none;
+.modal-content {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    max-height: 90%;
 }
 
-.contact form .flex{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.close {
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.contact form .flex .box{
-    width: 49%;
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
+
 
 .credit{
     text-align: center;
